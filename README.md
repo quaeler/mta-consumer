@@ -10,8 +10,8 @@ via edge types representing the semantic ideas of 'serves' and 'arrived at,' the
 &ndash; in addition to doing the map-reduce on the train statuses received.
 
 ## infrastructure
-I'm running this with [Kafka 2.1.0 (targeting Scala 2.12)](https://kafka.apache.org/downloads.html) for historic
-reasons, [Spark-Hadoop 2.3.0](https://spark.apache.org/downloads.html) for historic reasons, and
+I'm running this with [Kafka 2.1.0 (targeting Scala 2.12)](https://kafka.apache.org/downloads.html) for historical
+reasons, [Spark-Hadoop 2.3.0](https://spark.apache.org/downloads.html) for historical reasons, and
 [JanusGraph 0.4.1](https://github.com/JanusGraph/janusgraph/releases). I bring up JanusGraph backed by Cassandra
 utilizing Elastic Search.
 
@@ -41,8 +41,8 @@ Thereafter, `mvn package` will provide you with all runnable assets.
 
 ## running
 Once the infrastructure is up and running, there are two classes that should be executed:
-* `st.theori.mta.kafka.SparkKafkaConsumer` should be spark-submit with the maven-assembled jar (produced by assailing
-the package maven target of this project)
+* `st.theori.mta.kafka.SparkKafkaConsumer` should be spark-submit with the maven-assembled jar (produced by invoking
+the `package` maven target of this project)
 * the `st.theori.mta.Maine` class does the work of polling the MTA feed and then publishing the N-many `MTAMessage` to
 Kafka &mdash; and then sleeping 5s before polling again
 
