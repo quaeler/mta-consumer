@@ -36,7 +36,8 @@ mentioning the `createStarted()` method in `com.google.common.base.Stopwatch`
 I've included the transpiled protocol buffer classes, in case you don't have `protoc` compiled locally in order to
 process the also-included `.proto` files. As taken from GitHub, all you need do to this project is add your MTA API
 from either [here](https://datamine.mta.info/user/register) or [here](https://api.mta.info/) to the appropriate
-`st.theori.mta.Maine` class constants. Thereafter, `mvn package` will provide you with all runnable assets.
+`st.theori.mta.Maine` [class constants.](https://github.com/quaeler/mta-consumer/blob/master/src/main/java/st/theori/mta/Maine.java#L28-L32)
+Thereafter, `mvn package` will provide you with all runnable assets.
 
 ## running
 Once the infrastructure is up and running, there are two classes that should be executed:
@@ -90,8 +91,8 @@ Which, if we look up station id '206S' (see below) this is 225th St; we can see 
 ## what can i do on my own fork of this?
 There's certainly things you can add in order to get familiar with ideas in the project and add to it. Off the top
 of my head:
-* someone nice took the time to make a CSV file which i've included in the resources directory; the CSV
-maps station id to human display text. A nicety would be to load this CSV and have a `Map` via which the vertex
+* someone nice took the time to make [a CSV file which i've included in the resources directory;](https://github.com/quaeler/mta-consumer/blob/master/src/main/resources/NYC-MTA-Stops.csv)
+the CSV maps station id to human display text. A nicety would be to load this CSV and have a `Map` via which the vertex
 could be populated with a display name.
 * tests, of course
 * various 'TODO' notes in `st.theori.mta.janus.MTAGraphFactory`
