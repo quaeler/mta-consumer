@@ -6,8 +6,8 @@ consumed by a Spark bundle which both does a map-reduce count based on train sta
 of the train events into a JanusGraph instance.
 
 Over time, the Spark execution bundle builds a graph between vertices representing subway lines, stations, and trains,
-via edge types representing the semantic ideas of 'serves' and 'arrived at,' the latter with a time stamp property, 
-in addition to doing the map-reduce on the train statuses received.
+via edge types representing the semantic ideas of 'serves' and 'arrived at,' the latter with a time stamp property
+&ndash; in addition to doing the map-reduce on the train statuses received.
 
 ## infrastructure
 I'm running this with [Kafka 2.1.0 (targeting Scala 2.12)](https://kafka.apache.org/downloads.html) for historic
